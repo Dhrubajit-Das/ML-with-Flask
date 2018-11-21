@@ -1,0 +1,26 @@
+This file contains the steps taken for the assignment:
+
+   Backend used       : Flask
+   Model used         : SSD (Single shot multibox object detector)
+   Image preprocessing: OpenCV
+
+Here i have used a pre-trained model which was trained on 90 different classes.
+
+1. File "ObjectDetector.py":
+   This file contains the model which predicts new images.
+
+
+2. File "app.py": This file contains the flask codes.
+
+3. File "templates/index.html": This file has the html codes for the webpage.
+
+4. Folder model contains the pretained SSD model.
+
+
+Webpage description:
+It is a simple webpage that lets you select the image.. The image is selected by the "Choose file" button and it displays the images as well. 
+"Detect object!" button will detect the objects.
+
+And the coordinates of the boxes will be displayed in the command prompt.
+
+Thank you
