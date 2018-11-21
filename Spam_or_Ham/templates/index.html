@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spam_ham_detector</title>
+
+</head>
+
+<body>
+	<header>
+		<div class = "header">
+		<div id = "header_id">
+			<h1><b><center>Sentiment Detector</center></b></h1>
+		</div>
+		</div>
+    </header>
+
+    <div class = "ML_things">
+    	<form action = "{{url_for("predict_sentiment")}}" method="POST">
+    	<p><center> Enter the review here.. </center></p>
+    	<center><textarea name="comment" rows="10" cols="50"></textarea></center>
+    	<center><input type = "submit", class="submit_button", value = "Predict Sentiment"></center>
+    	</form>
+	</div>
+</body>
+</html>
+
+

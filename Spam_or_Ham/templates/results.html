@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spam_ham_detector</title>
+
+</head>
+
+<body>
+	<header>
+		<div class = "header">
+		<div id = "header_id">
+			<h1><b><center>Sentiment Detector</center></b></h1>
+		</div>
+		</div>
+    </header>
+
+    <div class = "ML_things">
+    	<form action = "{{url_for("predict_sentiment")}}" method="POST">
+    	<p><center> Enter the review here.. </center></p>
+    	<center><textarea name="comment" rows="10" cols="50">{{comment}}</textarea></center>
+    	<center><input type = "submit", class="submit_button", value = "Predict Sentiment"></center>
+    	</form>
+	</div>
+
+    <center><div class = "results">
+         {% if prediction == 1 %}
+             <h2>SPAM</h2>
+         {% elif prediction == 0 %}
+             <h2> NOT - SPAM </h2>
+         {% endif %}
+         
+    </div></center>
+    
+    <div class = "homepage">
+        <form action = "{{url_for("go_back")}}">
+        <center><input type = "submit", class="submit_button", value = "Try Again!"></center>
+        </form>
+    </div>
+
+</body>
+</html>
